@@ -1,0 +1,1482 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>JohnStrenio.com</title>
+  <meta name="description">
+  <meta name="author" content="SitePoint">
+
+  <!--Bootstrap-->
+  <link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+  crossorigin="anonymous"
+/>
+<!--Required Scripts for Bootstrap as per 4.4 documentation-->
+<script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  crossorigin="anonymous"
+></script>
+
+  <link rel="stylesheet" href="index.css?v=1.0">
+  <script src="index.js"></script>
+  <link rel="shortcut icon" href="favicon12.png" type="image/png" />
+  
+</head>
+
+<body class="body entire-webpage">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container navbar_container">
+
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#projects" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Projects
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown">Machine Learning</a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item" href="#insurance">End-to-end Deployed ML Pipeline</a>
+                  <a class="dropdown-item" href="#xray">AlexNet CNN and Saliency Maps</a>
+                  <a class="dropdown-item" href="#rl">Reinforcement Learning w/ Atari and Robotics Sim</a>
+                  <a class="dropdown-item" href="#bert">Fine-tuning BERT language Model for QA</a>
+                  <a class="dropdown-item" href="#gan">Generating Fake Images Using GANs</a>
+                  <a class="dropdown-item" href="#hand">MNIST Handwriting <br> detection from scratch</a>
+                  <a class="dropdown-item" href="#facerec">CNN trained from scratch <br> for Facial Recognition</a>
+                  <a class="dropdown-item" href="#vui">Voice Assistant</a>
+                  <a class="dropdown-item" href="#kmeans">K-Means Clustering</a>
+                  <a class="dropdown-item" href="#ttt">Tic Tac Toe Using Reinforcement Learning</a>
+                </ul>
+              </li>
+              
+              <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown">Database, Games and Graphics</a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item" href="#db">SQL NOAA Database</a>
+                  <a class="dropdown-item" href="#vr">GoogleVR Game</a>
+                  <a class="dropdown-item" href="#graph">Image Segmentation <br> using Graphcuts</a>
+                  <a class="dropdown-item" href="#knn">SIFT and KNN on Images</a>
+                  <a class="dropdown-item" href="#game">Unity Game</a>
+                  <a class="dropdown-item" href="#face">Face Detection and Filters</a>
+                </ul>
+              </li>
+
+              <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" data-toggle="dropdown">Hardware</a>
+                <ul class="dropdown-menu">
+                  <a class="dropdown-item" href="#cam">4G Remote Cam</a>
+                  <a class="dropdown-item" href="#ball">Arduino Ball Launcher</a>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link text-nowrap" href="#nasa">NASA Internship</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-nowrap" href="#resume">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-nowrap" href="#ski">Ski Career</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-nowrap" href="#contact">Contact</a>
+          </li>
+      </div>
+
+    </div>
+  </nav>
+
+
+<div class="container bg-grey">
+
+  <div class="section">
+    <div class="row">
+      <div class="col header">
+        John Strenio 
+      </div>
+    </div>
+    <div class="row">
+      <div class="header2 col">
+        Data Scientist
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-4"> 
+        <img src="images/portrait.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+      <div class="col col-8">
+        My name is John Strenio, I'm an ex-professional skier and associate data scientist at Scribd.
+         I was raised in Vermont and currently call Portland, Oregon home. After three years of 
+         postbaccalaureate studies in computer science at Portland State University my internship at NASA Armstrong Flight Research
+          Center in 2019 led me to realize I wanted to pursue a graduate degree. My curriculum covered a
+           wide breadth of ML and related topics including: computer vision, reinforcement learning, and 
+           natural language processing which is the subfield I currently work in. During my ski career I medaled in the X-Games, stunt doubled for Vin Diesel,
+            and appeared in ski films from production companies including Meathead Films and Level 1 Productions. I created this 
+            site to act as a portfolio of some of the projects I've completed. 
+      </div>
+    </div>
+  </div>
+
+  <h3 class="full-width">
+    <div class="bar">&nbsp</div>
+  </h3>
+
+
+
+
+  <!-- ============================================================= Scribd ========================================================================= -->
+
+  <div class="section">
+    <a name="nasa"></a>
+    <div class="row">
+      <div class="col header">
+        Work at Scribd
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-5">
+        <img src="images/scribd.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+      <div class="col col-7">
+        In January 2022 I began working for Scribd, an e-book and audiobook subscription
+        service which hosts 60 million published titles and user uploaded documents. While I've
+        only just begun, my work with the Applied Research - Intelligent Systems branch
+        is grounded in natural language processing for the analysis, classification and
+        manipulation of different texts.
+      </div>
+    </div>
+
+    <h3 class="full-width">
+      <div class="bar">&nbsp</div>
+    </h3>
+
+
+  <!-- ============================================================= INTERNSHIP ========================================================================= -->
+
+  <div class="section">
+    <a name="nasa"></a>
+    <div class="row">
+      <div class="col header">
+        NASA Internship
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-5">
+        <img src="images/hawk.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+      <div class="col col-7">
+        In December 2019 I completed a 4 month long internship for NASA at the Armstrong 
+        Flight Research Center located at Edwards Airforce Base in the middle of the Mojave
+        Desert. <a href="https://ntrs.nasa.gov/citations/20190034168">My work for the Sensors and System Development branch
+        </a> involved writing embedded systems code where I helped build a variant of the Fiber Optic Sensing System (FOSS) which 
+        could be used for a number of purposes including real time structual strain and 
+        temperature readings. The main project I completed was writing a multi-threaded
+        program in C that initiated a serial connection with a microcontroller, received 
+        and parsed a signal from it, then processed the raw data by performing fourier 
+        transforms to calculate strain or temperature change.
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="14"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="15"></li>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="/images/Slide1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide3.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide4.jpg" alt="4th slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide5.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide6.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide7.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide8.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide9.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide10.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide11.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide12.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide13.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide14.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide15.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/Slide16.jpg">
+            </div>
+
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <h3 class="full-width">
+    <div class="bar">&nbsp</div>
+  </h3>
+
+    <!-- ============================================================= ML PROJECTS ========================================================================= -->
+
+  <div class="section">
+    <a name="projects"></a>
+    <div class="row">
+      <div class="col header">
+        Machine Learning Projects
+      </div>
+    </div>
+
+    <a name="insurance"></a>
+    <div class="row project_header">
+      <div class="col col-6">
+        End-to-end ML Pipeline Deployed with Web-based Endpoint
+      </div>
+      <div class="col col-6">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/insurance_inference" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        I've found that companies not only want someone who can
+        build and analyze models, but also someone who understands the entire ML pipeline from raw data to model endpoint. I 
+        created this project to do just that, beginning with an insurance company's client database, comprised of information 
+        on current insurance policy holders I set out to determine whether to pursue new health insurance clients as vehicle insurance customers 
+        as well based on past customers' interest. I visualized and described
+        the data to gather insights on how to build my model. I then cleaned the data and trained my model using pytorch. Next I built a
+        <a href="https://insurance-inference.herokuapp.com/index">model endpoint deployed here,</a> that a
+        sales person or business associate could access for easy and actionable inferences from my model demonstrating my ability
+        to create real effect from raw data. More extensive <a href="https://github.com/jstrenio/insurance_inference/blob/main/insurance.ipynb">visualizations and model details can be found in the jupyter notebook.</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/metrics.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+    Feature Correlation
+    <div class="row">
+      <div class="col">
+        <img src="images/correlation.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/ins_train.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+
+    <a name="xray"></a>
+    <div class="row project_header">
+      <div class="col col-6">
+        AlexNet CNN for Pneumonia Detection and Saliency Maps for Hyperparameter Analysis
+      </div>
+      <div class="col col-6">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/Saliency-maps-on-Pneumonia-X-rays" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        For a course on Deep Learning in Computer Vision I worked with a small group to create a modified version of 
+        the once state-of-the-art AlexNet Convolutional Neural Net and trained it on chest x-ray images for Pneumonia
+        detection. While we achieved an accuracy of 86% on the validation dataset, we also analyized the effect of the input image resolution, not
+        only through accuracy, but also by visualizing the final layer's activations using saliency maps. This allowed us
+        to not only see which accuracies performed best, but why they performed best, and which image features were
+        triggering the model's predictions.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/xray_train.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/xray_train.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-6">
+        <img src="images/xrays.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+      <div class="col col-6">
+        <img src="images/heatmaps.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        We found that while the lower resolution images still performed well, they were performing their detection on 
+        more broad stroke features while the higher resolution images were focusing on smaller details, particularly 
+        high contrast points such as the ribcage where differences maybe more clear. This not only provides insight
+        into the importance and efficacy of different image resolutions in radiology but also particularly inregard 
+        to pneumonia detection specifically. 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/xray_maps.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+
+
+
+
+    <a name="rl"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        Reinforcement Learning w/ Atari and Robotics Sim
+      </div>
+      <div class="col col-8">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/Exploring-Reinforcement-Learning" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        My final semester of school I setup an independent study on Reinforcement Learning. The course was thesis based
+        and primarily focused on the application and use of video games in RL research. Upon completion of the course I set out to
+        implement some of the algorithms that embodied the core aspects of RL that I had studied.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-9">
+        My first implementation was with a tabular version of Q-Learning, I wanted to work directly with the bellman equation 
+        and Q-table before abstracting much of the process away with Deep Learning. While <a href="https://arxiv.org/abs/1312.5602">Minh et al. 
+          used Atari to change RL using DQN</a>, I wanted to also experiment with the video game system. While the action space of the game "Breakout" is small,
+        (left or right), the state space of the screen is enormous so to work in the tabular setting I queried the ram to find
+        the ball and paddle coordinate values. These values were still very large for the tabular setting however so I created a 
+        grid with zones the ball and paddle could lie within which was tight enough for the agent to learn the general correlation
+        between the objects. while it wasn't revolutionary, I was able to demonstrate its ability to learn the basic mechanics of 
+        the game without even basic optimizations such as frame stacking state-observations (which would show movement and direction
+        to the agent).
+      </div>
+      <div class="col col-3">
+        <img src="images/breakout_grid.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+    <div class="row">
+      <img src="images/breakout.gif" class="img-fluid rounded float-center" alt="Responsive image">
+    </div>
+
+    <div class="row">
+      <div class="col col-8">
+        The next thing I wanted to do was implement a modern algorithm (utilizing Deep Learning) and explore the other major branch
+        of RL with Policy Gradient methods and continuous action spaces. While I was originally going to implement Vanilla PG
+        (<a href="https://people.cs.umass.edu/~barto/courses/cs687/williams92simple.pdf">REINFORCE</a>), I found that <a href="https://arxiv.org/abs/1707.06347">
+        Proximal Policy Optimization </a> (PPO) would further introduce me to Actor-Critic algorithms without much 
+        additional work and provide me with a more robust algorithm. I first ensured my implementation was correct by testing it
+        on OpenAI's Pendulum environment within their Gym Platform which involveds balancing a pendulum upside down.
+      </div>
+      <div class="col col-4">
+        <img src="images/pendulum.gif" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+    <div class="row">
+      Next I set out to test my algorithm within the Mujoco robotics environment, a fairly demanding and complex setting. I began
+      with the simplier "Half Cheetah" environment which benefitted from the fine tuning of hyperparameters before attempting to
+      implement the "Ant" environment which involves a fully 3 dimensional setting. Both Environments task the algorithm with moving
+      the agent forward as quickly and far as possible. With the help of tracking hyperparameters through tensorboard I was again
+      able to find moderate success with my algorithms though further progress could be made from reward shaping as some of my versions
+      leverage the high power to weight ratio of the agent as well as the low cost of flipping the agent upside down.
+    </div>
+
+    <div class="row">
+      <div class="col col-1"></div>
+      <div class="col col-11">
+        <iframe width="800" height="500" src="https://www.youtube.com/embed/khfhQC-DY1U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-1"></div>
+      <div class="col col-11">
+        <iframe width="800" height="500" src="https://www.youtube.com/embed/krkDM1yiH7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+      </div>
+    </div>
+
+    <a name="bert"></a>
+    <div class="row project_header">
+      <div class="col col-6">
+        Commonsense Question Answering with Bert Language Model
+      </div>
+      <div class="col col-6">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/NLP-paper-reimplementation" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        For a course on Natural Language Processing, I reimplemented core elements of the 2020 
+        paper <a href="https://arxiv.org/abs/2004.14074">"Pretraining is Almost All You Need"</a> by Tamborrino et al.
+        using the revolutionary transformer based language model Bert. The authors propose a sequence scoring method
+        that leverges Bert's masked language model objective to individually mask n-grams from a premise sentence, which
+        are summed to obtain the probability of a potential answer. Bert is traditionally "fine-tuned" or trained further, on
+        a specific task such as question answering however the authors' technique is capable of achieving fine-tuned level accuracies using
+        a pre-trained model alone. One of the datasets used by the authors is the CommonsenseQA dataset, a question
+        answering dataset distinguished by the fact that the correct answer is present nowhere in the question, requring
+        a deeper understanding of what is being asked.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/cqa.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="images/ssm.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        For my project I first fine-tuned the Bert-base, and distilBert models on a version of the CQA dataset which I 
+        modified myself to be trained on Next Sentence Prediction, using potential answers as the 2nd sentence as 
+        described by the authors. Using these fine-tuned models as a benchmark I then implmented the 1-gram version of 
+        the authors proposed scoring method and used it on a validation set in conjunction with the pre-trained only
+        models. While the authors had success on the much larger RoBerta model, I found that it underperformed when used
+        with the Bert-base model, but was successful when used with the distilbert Model providing evidence that their 
+        method is dependent on the model size and not universally applicable. 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class='col col-2'></div>
+      <div class="col">
+        <img src="images/ssm_results.jpg" class="img-fluid rounded float-left" alt="Responsive image">
+      </div>
+    </div>
+
+    <a name="gan"></a>
+    <div class="row project_header">
+      <div class="col col-6">
+        Generating Fake Images Using GANs
+      </div>
+      <div class="col col-6">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/GAN-on-MNIST-Fashion-Dataset" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        For this project I built a simple Generative Adversarial Network (GAN) to produce artificial images
+        of different clothing items, mimicking the MNIST Fashion Dataset. The GAN consists of 2 networks
+        trained in unison, a generator network, creating images seeded from a 100 value long vector of random
+         values, and a discriminator network, attempting to classify the fake images as real or generated. 
+         The generative network relies on the discriminative network to generate more believable images and
+         the discriminative network relies on the generative network to continually produce better fake images
+         for it to learn to distinguish between. 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/fashion.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-2"></div>
+      <div class="col col-6">
+        <img src="images/gan.gif" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-6">
+        <img src="images/shoe_gan.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+      <div class="col col-6">
+        <img src="images/shirt_gan.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+
+    <a name="hand"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        Handwritten Numeral Recognition Software "from scratch"
+      </div>
+      <div class="col col-8">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/DNN-from-scratch-on-MNIST" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-6">
+        This project was for a machine learning class inwhich we implemented different
+        common ML techniques without the use of any ML libraries to learn about and experiment
+        with the different hyper parameters that influence the speed that an algorithm
+        can learn and maximum accuracy it can achieve. This project worked with the
+        popular handwritten digits dataset from MNIST which consists of 60,000 samples
+        of handdrawn numbers.
+      </div>
+      <div class="col col-6">
+        <img src="images/digits.png" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-4">
+        Using stochastic graident descent, the sigmoid activation function and a single
+         hidden layer network with 100 hidden nodes and no momentum term I managed to 
+         achieve an accuracy of over 97% on a validation dataset within only 4 epochs.
+      </div>
+      <div class="col col-8">
+        <img src="images/figure_1.png" class="img-fluid rounded float-right" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-4">
+        Out of the infrequent mistakes that the algorithm made, the most common was predicting a '4'
+        for a '9' and vice versa.
+      </div>
+      <div class="col col-8">
+        <img src="images/figure_2.png" class="img-fluid rounded float-right" alt="Responsive image">
+      </div>
+    </div>
+  </div>
+
+
+    <a name="facerec"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        Facial Recognition with Tensorflow and Keras
+      </div>
+      <div class="col col-8">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/Facial-Recognition" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        My first course on machine learning tasked us with implementing different ML algorithms "from scratch"
+        including a Deep Neural Network (See ML handwriting below). Equipped with a fundemental understanding 
+        of the algorithm I wanted to learn the tools used in industry to accomplish similar tasks. For this 
+        project I implemented a Convolutional Neural Network trained on my face as a simple binary classifier 
+        for, John or Stranger. I chose not to use transfer learning to see how accurate my model could be with
+         just a few hundred photos.
+      
+        <br><br>
+
+         My first step was collecting and organizing a dataset. I downloaded lots of high resolution photos of
+         large groups of people and also took a couple hundred photos of my face from the front with various
+         slight angles, lighting conditions and facial expressions. Using OpenCV and its Haar Classifier I then
+         cycled through all of my raw images detecting every face and writing a new jpg file for each face,
+         resizing them, setting them to grayscale then normalizing the pixel values. I then used the keras image
+         processing library to extend my couple hundred image dataset into a 1000 image dataset for each category,
+         augmenting the photos via slight adjustment to image rotation, brightness and vertical and horizontal pixel 
+         shift.
+        
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/group_photo.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <img src="images/lj_face.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        The next step was building the CNN and training the data. My model consisted of a few convolutional
+        layers of various sizes with relu activation and pooling layers with a deep layer and sigmoid function as output
+        since my classifier was binary. Once the model was trained I again used OpenCV to open
+        my webcam, process incoming frames, and feed them to my model boxing and printing whether it thinks a face 
+        is mine or not. Finally I reconstructed my code (originally written in jupyter notebook for ease of training)
+        to automate the whole process. The final product as seen on my github allows a user to place 200 raw photos 
+        of themselves into a folder and simply run the training program as a whole. Once run, they can then run 
+        the recognition program with a customized classifer for themselves.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-2"></div>
+      <div class="col">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/xe5YaNbCjfw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  <a name="vui"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        Surf Report Voice Assistant
+      </div>
+      <div class="col col-8">
+          <a class="btn btn-primary" href="https://github.com/jstrenio/wavefiend" target="_blank">
+            <img src="images/octocat.jpg" width="20" /> GitHub
+          </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-6">
+        <iframe width="400" height="480" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/3173f974-fbe4-4386-9df1-6087c1be0ff6"></iframe>
+      </div>
+      <div class="col">
+        <a href="https://console.dialogflow.com/api-client/demo/embedded/3173f974-fbe4-4386-9df1-6087c1be0ff6">This project using Google's Dialogflow 
+        </a>was written in Javascript and runs via a Node.js server on Heroku, because of this the first
+        attempt to chat with it will time out but wake up the server. After that you can ask or type for the Surf
+        and/or weather conditions at a number of surf spots, beaches, towns or regions throughout the Pacific Northwest.
+        If you don't know a town or surf spot you can also just ask for a region e.g. "What's the surf looking like on 
+        the Central Oregon Coast?" or "What's the temperature on the coast in Southern Washington?". Because the quality
+        surf API's I contacted were no longer providing API keys, I utilized the same NOAA buoy data they use instead
+        requiring me to fetch and parse the data from individual buoys for different locations myself and limiting what 
+        otherwise could have been a global app to a regional one (without putting in extensive work).
+      </div>
+    </div>
+
+    <a name="kmeans"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        K-Means Clustering on Images
+      </div>
+      <div class="col col-8">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/Image-Clustering-and-Comparison" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        This program applies the unsupervised learning technique K-Means Clustering on an image in 3D 
+        space by RGB value. Individual pixel values across the entire image are then set to the value 
+        of the centroid to which they are assigned. Images are produced with K=10, K=5 and then the
+         clustering is also visualized in 3D space at the bottom.
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="images/kmeans.jpg" class="img-fluid rounded float-center" alt="Responsive image">
+      </div>
+    </div>
+
+    <a name="ttt"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        Tic Tac Toe AI Using Reinforcement Learning
+      </div>
+      <div class="col col-8">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/tictactoe" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        Before I was able to take any Machine Learning courses I was excited about the prospect
+        and wanted to explore a simple implementation without following any books or tutorials
+        to see if I could figure out how the fundemental concepts worked. Knowing the basic idea
+        for many reinforcement learning algorithms was to adjust initially equal probabilities
+        based on a positive or negative outcome I wrote this Tic Tac Toe program without the 
+        use of any ML libraries or frameworks. 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-4">
+        Since Tic Tac Toe is "solvable" I was able to write algorithms for the perfect X's
+        and O's game then train my probabilities against them. While I had 10% of moves be
+        random to help avoid local minima, generally against a perfect player, the best result
+        one can hope for is a draw so my learning metric includes that outcome. Despite
+        slow learning rates due to implementation designs I was able to achieve winning or 
+        stalemate games greater than 90% for both players. 
+      </div>
+      <div class="col col-8">
+        <img src="images/ttt_plot.png" class="img-fluid rounded float-right" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-6">
+        One interesting problem I discovered was that although I achieved a very
+        effective AI against an intelligent opponent, because of the way I designed
+        my aglorithm, it actually performed very poorly against non-optimal moves. 
+        To counter this I attempted training my model against a mix of random moves
+        and hand selected moves including having X move to the center for the first
+        move rather than the optimal corner move (as can be seen in the plot above)
+        which it was able to learn to play against effectively as well.
+        <br><br>
+        Since in the event of a perfect opponent a player should only expect a draw;
+        my algorithm was very good at finding moves that prevented
+        it from losing however without the proper additional incentive, it failed to
+        distinguish moves that would result in a win with a sub-optimal opponent
+        from just another move that leads to a draw with a perfect opponent as can be seen in X's 2nd move
+        here of space "8".
+      </div>
+      <div class="col col-1"></div>
+      <div class="col col-4">
+        <div id="carouselExampleIndicators3" class="carousel" data-ride="carousel" data-interval="false">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators3" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators3" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators3" data-slide-to="4"></li>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="/images/x1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/x2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/x3.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/x4.jpg" alt="4th slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/x5.jpg" alt="4th slide">
+            </div>
+
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-6">
+        However in some cases the algorithm performs flawlessly and even learned for O's that a center 
+      move to start is optimal, even recognizing the classic "corners trap" that the 
+      first player can setup that must be blocked by selecting a side space immediately, despite the trap not becoming
+      evident for another couple of moves.
+      </div>
+      <div class="col col-1"></div>
+      <div class="col col-4" style="padding-bottom: 60px">
+        <div id="carouselExampleIndicators4" class="carousel" data-ride="carousel" data-interval="false">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators4" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators4" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators4" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators4" data-slide-to="3"></li>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="/images/o1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/o2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/o3.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/o4.jpg" alt="4th slide">
+            </div>
+
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators4" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators4" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  
+  <h3 class="full-width">
+    <div class="bar">&nbsp</div>
+  </h3>
+
+    <!-- ============================================================= GAME PROJECTS ========================================================================= -->
+
+  <div class="section">
+    <a name="db"></a>
+    <div class="row">
+      <div class="col header">
+        General Projects (Database, Graphics and Games)
+      </div>
+    </div>
+
+    <a name="db"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        Ocean and Surf Condition Relational Database Using NOAA Buoy Data
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        For a course on databases and SQL I used historical data from NOAA’s national buoy database center 
+        to build a relational database on ocean and weather condition trends in the Pacific Northwest. I 
+        then used domain knowledge of the ocean and telemetry to construct queries that would answer common questions
+         surfers or beach goers might have on specific areas or times of year in the Pacific Northwest.
+          Schema and examples are below.
+      </div>
+    </div>
+    <br>
+    ER Diagram
+    <div class="row">
+      <div class="col">
+        <img src="images/er.png" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/schema.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/sql1.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/sql2.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/sql3.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+
+
+
+
+    <a name="vr"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        GoogleVR SDK Video Game
+      </div>
+      <div class="col col-4">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/vr" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+      <div class="col col-4">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.JohnStrenio.MonsterEvasionVR" target="_blank">
+          <img src="images/googleplay.jpg" width="20" /> Google Play
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="images/vr_thumb.webp" style="border-radius: 20px">
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        This was a project for a VR course where I explored the GoogleVR SDK for Unity and implemented
+        an android game using it. <a href="https://play.google.com/store/apps/details?id=com.JohnStrenio.MonsterEvasionVR&hl=en&gl=US">
+          It can be found on the Google Play Store</a> and my
+        presentation on my project is below.
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <iframe width="720" height="430" src="https://www.youtube.com/embed/LfLtm-xbBBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+
+
+    <a name="graph"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        Max-Flow/Min-Cut Algorithm for Image Segmentation
+      </div>
+      <div class="col col-8">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        This project was initially an implementation of <a href="http://www.cs.yale.edu/homes/lans/readings/routing/ford-max_flow-1956.pdf">
+        the Ford-Fulkerson Algorithm </a>
+        proposed for finding the max-flow in a system applied to a grid. A shortest path
+        search algorithm is used to connect two terminal nodes, the edges along the path are then
+        filled to the maximum capacity of the edge in the set with the least remaining capacity,
+        filling that edge, and partially filling all the others. This process eventually blocks
+        all paths from one terminal node to the other. Because the max-flow also inherently obtains 
+        the min-cut, it can be used for image segmentation along high contrast lines. This makes it 
+        a highly effective method for cutting a designated foreground away from a background.
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-4"></div>
+      <div class="col">
+        <img src="images/graph.gif" width="300" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-6">
+        <img src="images/portrait_cut.gif" class="img-fluid rounded" alt="Responsive image">
+      </div>
+      <div class="col col-6">
+        <img src="images/mtn_cut.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        The project then turned to image segmentation using the differences between adjacent pixel intensities as edge 
+        capacities. This required additional optimizations to work on larger and more complex
+        images, including some propsed by boykov et al. in their paper 
+        <a href="https://ieeexplore.ieee.org/abstract/document/1316848">"An experimental comparison
+        of min-cut/max- flow algorithms for energy minimization in vision"</a>. Most notably, the 
+        normalization of capacities derived from intensity differences, then the establishment of
+        a capacity threshold from which edges above, have their capacities greatly extended. Both 
+        of these optimizations combat the filling of high capacity nodes (where a cut is undesirable)
+        that happen to be along popular shortest paths between the terminal nodes (imagine an 8 way intersection
+        that's popular because it goes everywhere, but doesn't actually have a lot of lanes). A final optimization
+        was a basic equivelant to "region painting" as seen in applications like photoshop, where
+        multiple nodes for a foreground and background are allowed for guided cuts along paths high in 
+        noise or low in contrast.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-2"></div>
+      <div class="col col-6">
+        <img src="images/mtn_grass_cut.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+
+    <a name="knn"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        Key Point Comparison using SIFT detector and KNN
+      </div>
+      <div class="col col-8">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/Image-Clustering-and-Comparison" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        This project was designed to take two images of the same object from different angles
+        and identify corresponding points between the images. This was done in a two part process,
+        first key points in the image were identified for comparison which would be done using 
+        OpenCV's built-in SIFT detector. Next the best corresponding key points in the two images
+        were determined using K Nearest Neighbors with a K value of 10% of the total key points.
+        I then compared my KNN implementation with OpenCV's built-in function. Finally I used
+        OpenCV to concatenate my two images horizontally and draw lines between corresponding points.
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="images/sift.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/knn.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+
+    <a name="game"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        Unity Game
+      </div>
+      <div class="col col-8">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/dark_cog" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        During my first year of studying Computer Science I wanted to excite myself with
+        the topic and decided that learning to make a basic video game would be the 
+        best way to dive into the process and force myself to learn. A year later I had 
+        completed a 3D game using the Unity Game Engine complete with character controllers,
+        FSM based AI, weapons systems and pathfinding algorithms for navigating the map. 
+        While many 3rd party assets exist for Unity to simplify the process I opted not to 
+        utilize any of them and even ended up modeling and animating the characters myself as well.
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-1"></div>
+      <div class="col">
+        <iframe width="720" height="420" src="https://www.youtube.com/embed/OntQx1-Cmko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <a name="face"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        Face Detection and OpenCV
+      </div>
+      <div class="col col-8">
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        This was just a small toy project playing with OpenCV as well as a pretrained Face detection model
+        to create a crude but fun mask program capable of running in realtime, similar to what can be found
+         on popular social media apps.
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-2"></div>
+      <div class="col">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZcNtuH6t_aI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  <h3 class="full-width">
+    <div class="bar">&nbsp</div>
+  </h3>
+
+  <!-- ============================================================= HARDWARE PROJECTS ========================================================================= -->
+
+  <div class="section">
+    <a name="vr"></a>
+    <div class="row">
+      <div class="col header">
+        Hardware Projects
+      </div>
+    </div>
+
+    <a name="cam"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        4G Remote Surf Cam
+      </div>
+      <div class="col col-8">
+        <a class="btn btn-primary" href="https://github.com/jstrenio/wildlive_remote_repo" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-7">
+        "Wildlive Remote" was an idea I had for an open source development class
+        inspired by the many isolated beaches I surf along the Oregon
+        coast and the desire to have some way of checking the conditions. Along 
+        with two other students I developed a raspberry pi based device that utilizes
+        a 4G capable modem to receive SMS text messages, execute different text
+        commands and ultimately return an email with a live photo from the device.
+        The program consists of two main components, one written in C that handles
+        all of the modem and SMS interactions, the other written in python that 
+        executes the commands and posts the video to a server to be rerouted to the 
+        user.
+      </div>
+      <div class="col col-5">
+        <img src="images/wildlive.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Jb2pPwleDmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <a name="ball"></a>
+    <div class="row project_header">
+      <div class="col col-4">
+        Automatic Tennis Ball Launcher
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-7">
+        The 'Puppy Launcher' was a project I came up with when I saw how expensive
+        small indoor tennis ball launchers for dogs were. I had begun experimenting
+        with arduino boards and realized I had taught myself enough to build one.
+        I came up with the design: a pressure sensitive button on a servo mounted 
+        gate, and two 12 volt DC motors; soldered the circuit using a universal PCB,
+        and wrote the C code to receive the button input, trigger the gate opening
+        and fire up the motors before shutting down and resetting. 
+      </div>
+      <div class="col col-5">
+        <video width="240" height="424" controls class="video">
+          <source src="videos/launcher.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <img src="images/launcher.jpg" class="img-fluid rounded float-right" alt="Responsive image">
+      </div>
+    </div>
+  
+  <h3 class="full-width">
+    <div class="bar">&nbsp</div>
+  </h3>
+
+  <!-- ============================================================= RESUME ========================================================================= -->
+
+  <div class="section">
+    <a name="resume"></a>
+    <div class="row">
+      <div class="col header">
+        Resume
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <iframe src="images/resume.pdf#toolbar=0" width="100%" height="900px">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="full-width">
+    <div class="bar">&nbsp</div>
+  </h3>
+
+  <div class="section">
+    <a name="ski"></a>
+    <div class="row">
+      <div class="col header">
+        Ski Career
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-4">
+        For nearly 15 years I competed internationally and filmed video segments
+        for ski movies. Contest highlights included winning a bronze medal in the 
+        X-Games and the World Ski Invitational, 5 time Rails to Riches Winner
+        and placing 6th in the first ever FIS World Championships, the event that
+        led to the inclusion of slopestyle skiing into the Winter Olympics. 
+      </div>
+      <div class="col col-8">
+        
+        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" data-interval="false">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="6"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="7"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="8"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="9"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="10"></li>
+            <li data-target="#carouselExampleIndicators2" data-slide-to="11"></li>
+          </ol>
+
+          <div class="carousel-inner" role="listbox" style="width:100%; height:650px !important">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="/images/whales_tails.png" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/sunset.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/vin.jpg" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/squaw.jpg" alt="4th slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/powder.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/cable.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/redbull.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/podium.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/joss2.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/freeskier.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/dewtour.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/images/whistler.jpg">
+            </div>
+
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        In front of the camera I won a Powder Magazine award for 'Best Jib', was
+        included in the Warren Miller film 'Like There's No Tomorrow' and stunt
+        doubled for Vin Diesel in the <a href="https://www.imdb.com/title/tt1293847/fullcredits">
+        Paramount Pictures 'Return of Xander Cage' </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-4">
+        <img src="images/xxx.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+      <div class="col col-8">
+        <img src="images/joss1.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        A look at a typical ski season
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <iframe width="720" height="420" src="https://www.youtube.com/embed/FIT1Pm2bxw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <div class="row">
+      <div class="col header">
+        Ski Resume
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <iframe src="images/lj_resume.pdf#toolbar=0" width="100%" height="900px">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="full-width">
+    <div class="bar">&nbsp</div>
+  </h3>
+
+    <!-- ============================================================= CONTACTS ========================================================================= -->
+
+  <div class="section">
+    <div class="row">
+      <div class="col header">
+        Press 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        
+      </div>
+      <div class="col">
+        <a class="btn btn-secondary" href="https://www.espn.com/espnw/news-commentary/story/_/id/7140792/lj-strenio-new-traveling-circus" target="_blank">
+          ESPN
+        </a>
+      </div>
+
+
+      <div class="col">
+        <a class="btn btn-secondary text-nowrap" href="https://www.nytimes.com/2017/01/18/movies/xxx-the-return-of-xander-cage-extreme-stunts-vin-diesel.html" target="_blank">
+            New York Times
+          </a>
+      </div>
+
+      <div class="col">
+        <a class="btn btn-secondary text-nowrap" href="https://en.wikipedia.org/wiki/LJ_Strenio" target="_blank">
+          Wikipedia
+        </a>
+
+      </div>
+
+      <div class="col">
+        
+
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        
+      </div>
+
+      <div class="col">
+        <a class="btn btn-secondary" href="https://ntrs.nasa.gov/citations/20190034168" target="_blank">
+          NASA
+        </a>
+      </div>
+
+      <div class="col">
+        <a class="btn btn-secondary" href="https://www.powder.com/interview/urban-ski-legend-lj-strenio-is-going-to-work-for-nasa/" target="_blank">
+          Powder
+        </a>
+      </div>
+
+      <div class="col">
+        <a class="btn btn-secondary" href="https://freeskier.com/videos/every-single-crash-from-the-making-of-lj-strenios-x-games-real-ski-edit" target="_blank">
+          Freeskier
+        </a>
+      </div>
+      <div class="col">
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        &nbsp
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="row">
+      <a name="contact"></a>
+      <div class="col header">
+        Contact
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-2"></div>
+      <div class="col col-2">
+        <a class="btn btn-primary" href="https://github.com/jstrenio" target="_blank">
+          <img src="images/octocat.jpg" width="20" /> GitHub
+        </a>
+        &nbsp
+        <br>
+        <br>
+        <a class="btn btn-primary" href="mailto:johnstrenio@gmail.com" target="_blank">
+          <img src="images/gmail.jpg" width="30" /> Email
+        </a>
+      </div>
+      <div class="col col-8">
+        <img src="images/shaka.jpg" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
