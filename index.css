@@ -1,0 +1,198 @@
+    .body {
+    background-color: white;
+    padding-top: 70px;
+    /* background-image: url('images/rainier2b.jpg'); */
+    font-size: 20px;
+    
+  }
+
+  .section {
+    min-height: 300px;
+    padding: 20px;
+
+  }
+
+  .col {
+      /* border: solid black 1px; */
+      background: white;
+      padding: 10px;
+  }
+
+  .img-fluid {
+    border: 1px solid black;
+    margin: auto;
+    margin-bottom: 30px;
+
+  }
+
+  .video {
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+
+  .header {
+      font-size: 34px;
+      font-weight: bold;
+      padding-left: 30px;
+      padding-top: 60px;
+      padding-bottom: 0px;
+  }
+
+  .header2 {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 30px;
+    background: white;
+    padding-top: 0px;
+}
+
+  .project_header {
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 50px;
+    background: white;
+    border-top: 10px solid white;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+}
+
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: black;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: black;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 12%;
+    height: 10px;
+    margin: 2px;
+    background-color: #000000;  
+}
+.carousel-indicators .active {
+    width: 12%;
+    height: 10px;
+    margin: 2px;
+    background-color: #000000;
+}
+
+.navbar {
+  font-size: 100%;
+  min-height: 80px;
+
+}
+
+.navbar-brand{
+  font-size: 100% !important;
+}
+/* ======================================= */
+.dropdown-submenu{
+  position: relative;
+}
+.dropdown-submenu a::after{
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 3px;
+  top: 40%;
+}
+.dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
+  display: flex;
+  flex-direction: column;
+  position: absolute !important;
+  margin-top: -30px;
+  left: 100%;
+}
+@media (max-width: 992px) {
+  .dropdown-menu{
+      width: 50%;
+  }
+  .dropdown-menu .dropdown-submenu{
+      width: auto;
+  }
+}
+
+
+.entire-webpage{
+  zoom: 0.8;
+}
+/* =================================================== */
+
+@media (min-width: 768px) {
+   .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+    font-size: 135%; 
+  }
+  .navbar_container {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+   .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1000px;
+    font-size: 100%;
+  }
+  .navbar_container {
+    margin-left: 20px;
+    width: 40%;
+    max-height:30px;
+  }
+}
+
+@media (min-width: 576px) {
+  .navbar_container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .navbar-toggler-icon {
+    height: 100px !important;
+    width: 80px !important;
+  }
+  .navbar .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100%;
+    font-size: 30px !important;
+  }
+  .navbar-brand .navbar-toggler .icon-bar{
+    font-size: 200% !important;
+    height: 100px !important;
+  }
+
+}
+
+.full-width {
+  width: 100%;
+  height: 10px;
+  background: rgb(0, 0, 0);
+  margin-top: 90px;
+}
+/* .wrap {
+  width: 80%;
+  max-width: 24em;
+  margin: 150px;
+  /* padding: 0.25em 0.625em; */
+} */
+
+
+
+
+
+
