@@ -124,26 +124,54 @@
 
   <h3 class="full-width"><div class="bar">&nbsp</div></h3>
 
-  <input id="q" />
-<button onclick="ask()">Send</button>
-<pre id="out"></pre>
+<!-- Add this to your <head> or right above the chat section -->
+<style>
+  #q {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
 
-<script>
-async function ask() {
-  const q = document.getElementById("q").value;
+  #out {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    margin-top: 20px;
+    min-height: 100px;
+    
+    /* This makes the text wrap instead of scrolling right */
+    white-space: pre-wrap;       
+    word-wrap: break-word;       
+    font-family: inherit; /* Makes it look less like "code" and more like a chat */
+    font-size: 1rem;
+    color: #333;
+  }
 
-  // Changed the URL to a relative path
-  const res = await fetch("/api/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ question: q })
-  });
+  .chat-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+</style>
 
-  const data = await res.json();
-
-  document.getElementById("out").textContent = data.answer;
-}
-</script>
+<div class="section chat-container">
+  <div class="row">
+    <div class="col header">Ask me anything about my experience</div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <!-- Changed input to textarea for more space -->
+      <textarea id="q" placeholder="What's John's experience with LLMs?"></textarea>
+      <button class="btn btn-primary btn-block" onclick="ask()">Send Message</button>
+      
+      <!-- The output box now wraps text -->
+      <pre id="out">The response will appear here...</pre>
+    </div>
+  </div>
+</div>
 
   <h3 class="full-width"><div class="bar">&nbsp</div></h3>
 
