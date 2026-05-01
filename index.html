@@ -132,7 +132,8 @@
 async function ask() {
   const q = document.getElementById("q").value;
 
-  const res = await fetch("https://YOUR-VERCEL-URL.vercel.app/api/chat", {
+  // Changed the URL to a relative path
+  const res = await fetch("/api/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ question: q })
