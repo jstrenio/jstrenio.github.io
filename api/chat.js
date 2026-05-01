@@ -1,4 +1,15 @@
 export default async function handler(req, res) {
+  // 1. ADD CORS HEADERS (Must be at the top)
+  res.setHeader('Access-Control-Allow-Origin', 'https://jstrenio.github.io');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // 2. HANDLE PREFLIGHT
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
+  // 3. YOUR ORIGINAL LOGIC
   const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
   const question = body.question;
 
