@@ -122,22 +122,24 @@
     </div>
   </div>
 
-  <input id="q" placeholder="Ask something..." />
-<button onclick="ask()">Send</button>
+  <h3 class="full-width"><div class="bar">&nbsp</div></h3>
 
+  <input id="q" />
+<button onclick="ask()">Send</button>
 <pre id="out"></pre>
 
 <script>
 async function ask() {
   const q = document.getElementById("q").value;
 
-  const res = await fetch("https://YOUR-VERCEL.vercel.app/api/chat", {
+  const res = await fetch("https://YOUR-VERCEL-URL.vercel.app/api/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ question: q })
   });
 
   const data = await res.json();
+
   document.getElementById("out").textContent = data.answer;
 }
 </script>
