@@ -141,7 +141,7 @@
 <div class="section">
   <textarea id="q" placeholder="Ask me about my experience..."></textarea>
   <button class="btn btn-primary" onclick="ask()">Send</button>
-  <pre id="out">Response will appear here...</pre>
+  <pre id="out">...</pre>
 </div>
 
 <script>
@@ -150,8 +150,8 @@ async function ask() {
   const out = document.getElementById("out");
   out.textContent = "Thinking...";
 
-  // Using a relative path so it works on Vercel automatically
-  const res = await fetch("/api/chat", {
+  // Points specifically to your production Vercel API
+  const res = await fetch("https://jstrenio-github-io.vercel.app/api/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ question: q })
