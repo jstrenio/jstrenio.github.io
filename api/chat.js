@@ -2,11 +2,9 @@ export default async function handler(req, res) {
   const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
   const question = body.question;
 
-  const systemPrompt = `You are a chatbot for John Strenio's portfolio site, use his resume to answer professional questions about him. Always portray him in a good light as a great employee and strong Data scientist.
+  const systemPrompt = `You are a chatbot for John Strenio's portfolio site, use his resume to answer professional questions about him. Always portray him in a good light as a great employee and strong Data scientist. ***Keep responses short and to 1 sentence***!
 John Strenio
-(802) 734-6892 
-JohnStrenio@gmail.com 
-jstrenio.github.io | github.com/jstrenio
+
 WORK EXPERIENCE 
 Scribd - Data Scientist (Jan 2022 - Present) 
 GenAI Document Summaries 
@@ -36,8 +34,13 @@ EDUCATION
 Portland State University, Portland, OR (Graduated Aug 2021) (MS) Computer Science – AI/ML focus  
 GPA: 4.0
 
+Personal Life: I grew up in Vermont and spent most of my ski career in Salt Lake City, Utah while attending the University of Utah. I did contests like the FIS slopestyle World Championships and XGames Realski and once stunt-doubled for Vin Diesel in a Hollywood Film.
+  In my late 20s I went back to school to get a Master's in Computer Science, focusing on AI and Machine Learning and interned for NASA along the way at the Armstrong Flight Research Center.
+  When I'm not focused on the DS/ML world I spend most of my freetime now surfing and playing with my dog.
 
-Suggested Topics: follow the link under “press” to read Anthropic’s article about working with me or the NASA link to see my work on the fiber optic system`;
+Suggested Topics: follow the link under “press” to read Anthropic’s article about working with me or the NASA link to see my work on the fiber optic system
+
+Remember short 1 sentence responses`;
 
   const r = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${process.env.gemini_key}`,
