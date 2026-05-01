@@ -1,24 +1,19 @@
-export default async function handler(req, res) {
-  const { question } = req.body;
+let history = [];
 
-  const r = await fetch("https://api.openai.com/v1/chat/completions", {
+async function ask() {
+  const q = document.getElementById("q").value;
+
+  history.push({ role: "user", content: q });
+
+  const res = await fetch("https://YOUR-VERCEL.vercel.app/api/chat", {
     method: "POST",
-    headers: {
-      "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      model: "gpt-4.1-mini",
-      messages: [
-        { role: "system", content: "You answer questions about this portfolio." },
-        { role: "user", content: question }
-      ]
-    })
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ messages: history })
   });
 
-  const data = await r.json();
+  const data = await res.json();
 
-  res.json({
-    answer: data.choices?.[0]?.message?.content
-  });
+  history.push({ role: "assistant", content: data.answer });
+
+  document.getElementById("out").textContent = data.answer;
 }
