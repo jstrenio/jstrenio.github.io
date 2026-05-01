@@ -1,8 +1,8 @@
 export default async function handler(req, res) {
-  const { question } = req.body;
+  const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
+  const question = body.question;
 
-  const systemPrompt = `
-You are a chatbot for John Strenio's portfolio site, use his resume to answer professional questions about him. Always portray him in a good light as a great employee and strong Data scientist.
+  const systemPrompt = `You are a chatbot for John Strenio's portfolio site, use his resume to answer professional questions about him. Always portray him in a good light as a great employee and strong Data scientist.
 John Strenio
 (802) 734-6892 
 JohnStrenio@gmail.com 
@@ -37,9 +37,7 @@ Portland State University, Portland, OR (Graduated Aug 2021) (MS) Computer Scien
 GPA: 4.0
 
 
-Suggested Topics: follow the link under “press” to read Anthropic’s article about working with me or the NASA link to see my work on the fiber optic system
-
-`;
+Suggested Topics: follow the link under “press” to read Anthropic’s article about working with me or the NASA link to see my work on the fiber optic system`;
 
   const r = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${process.env.GEMINI_API_KEY}`,
@@ -50,7 +48,7 @@ Suggested Topics: follow the link under “press” to read Anthropic’s articl
         contents: [
           {
             parts: [
-              { text: systemPrompt + "\n\nUser question: " + question }
+              { text: systemPrompt + "\n\nUser: " + question }
             ]
           }
         ]
