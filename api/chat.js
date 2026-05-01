@@ -1,19 +1,23 @@
-let history = [];
+export default async function handler(req, res) {
+  const { messages } = req.body;
 
-async function ask() {
-  const q = document.getElementById("q").value;
+  const r = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${process.env.GEMINI_API_KEY}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: messages.map(m => ({
+          role: m.role,
+          parts: [{ text: m.content }]
+        }))
+      })
+    }
+  );
 
-  history.push({ role: "user", content: q });
+  const data = await r.json();
 
-  const res = await fetch("https://YOUR-VERCEL.vercel.app/api/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ messages: history })
+  res.json({
+    answer: data?.candidates?.[0]?.content?.parts?.[0]?.text || ""
   });
-
-  const data = await res.json();
-
-  history.push({ role: "assistant", content: data.answer });
-
-  document.getElementById("out").textContent = data.answer;
 }
