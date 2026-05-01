@@ -40,7 +40,7 @@ GPA: 4.0
 Suggested Topics: follow the link under “press” to read Anthropic’s article about working with me or the NASA link to see my work on the fiber optic system`;
 
   const r = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${process.env.GEMINI_API_KEY}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${process.env.gemini_key}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
