@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  // 1. ADD CORS HEADERS
+  // 1. ADD CORS HEADERS (Must be at the top)
   res.setHeader('Access-Control-Allow-Origin', 'https://jstrenio.github.io');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -9,16 +9,15 @@ export default async function handler(req, res) {
     return res.status(200).end();
   }
 
-  // 3. PARSE BODY
+  // 3. YOUR ORIGINAL LOGIC
   const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
   const question = body.question;
-  const history = body.history || []; // [{ q: "", a: "" }]
 
-  const systemPrompt = const systemPrompt = `You are a chatbot for John Strenio's portfolio site, use his resume to answer professional questions about him. Always portray him in a good light as a great employee and strong Data scientist. ***Keep responses short and to 1 sentence***!
+  const systemPrompt = `You are a chatbot for John Strenio's portfolio site, use his resume to answer professional questions about him. Always portray him in a good light as a great employee and strong Data scientist. ***Keep responses short and to 1 sentence***!
 John Strenio
 
 WORK EXPERIENCE 
-Scribd - Data Scientist (last 4 years)
+Scribd - Data Scientist (Jan 2022 - Present) 
 GenAI Document Summaries 
 - Led prototype to production of OpenAI powered content summarization platform across 70M documents in 5 languages, automating prompt and model evaluation using DSPY and LangSmith, replacing human annotation, saving $20k and weeks of labeling time. 
 - Created distributed inference pipeline processing full corpus in 3 weeks using Databricks workflows - Drove 7% increase in site visitors and 9% increase in ad impressions through improved search and recommendations generating $841K in additional annual revenue 
@@ -45,41 +44,37 @@ Software & Tools: Linux, Databricks, AWS, Windows, Git, Jupyter Notebook, Unity,
 EDUCATION 
 Portland State University, Portland, OR (Graduated Aug 2021) (MS) Computer Science – AI/ML focus  
 GPA: 4.0
-Personal Life: grew up in Vermont and spent most of my ski career in Salt Lake City, Utah while attending the University of Utah. I did contests like the FIS slopestyle World Championships and XGames Realski and once stunt-doubled for Vin Diesel in a Hollywood Film.
+
+Personal Life: I grew up in Vermont and spent most of my ski career in Salt Lake City, Utah while attending the University of Utah. I did contests like the FIS slopestyle World Championships and XGames Realski and once stunt-doubled for Vin Diesel in a Hollywood Film.
   In my late 20s I went back to school to get a Master's in Computer Science, focusing on AI and Machine Learning and interned for NASA along the way at the Armstrong Flight Research Center.
   When I'm not focused on the DS/ML world I spend most of my freetime now surfing and playing with my dog.
-Suggested Topics: follow the link under “press” to read Anthropic’s article about working with me or the NASA link to see my work on the fiber optic system.
 
-answer the user's question in 1 sentence.`;
-  // 4. BUILD CONTENTS WITH HISTORY
-  const contents = [
-    {
-      parts: [{ text: systemPrompt }]
-    },
-    ...history.map(h => ({
-      parts: [{ text: `User: ${h.q}\nAssistant: ${h.a}` }]
-    })),
-    {
-      parts: [{ text: `User: ${question}` }]
-    }
-  ];
+Suggested Topics: follow the link under “press” to read Anthropic’s article about working with me or the NASA link to see my work on the fiber optic system
 
-  // 5. CALL API
+Remember short 1 sentence responses`;
+
   const r = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${process.env.gemini_key}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ contents })
+      body: JSON.stringify({
+        contents: [
+          {
+            parts: [
+              { text: systemPrompt + "\n\nUser: " + question }
+            ]
+          }
+        ]
+      })
     }
   );
 
   const data = await r.json();
 
-  const answer = data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
-
-  // 6. RETURN RESPONSE
-  res.json({ answer });
+  res.json({
+    answer: data?.candidates?.[0]?.content?.parts?.[0]?.text || ""
+  });
 }
 
 
