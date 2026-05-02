@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 John Strenio
 
 WORK EXPERIENCE 
-Scribd - Data Scientist (Jan 2022 - Present) 
+Scribd - Data Scientist (last 4 years)
 GenAI Document Summaries 
 - Led prototype to production of OpenAI powered content summarization platform across 70M documents in 5 languages, automating prompt and model evaluation using DSPY and LangSmith, replacing human annotation, saving $20k and weeks of labeling time. 
 - Created distributed inference pipeline processing full corpus in 3 weeks using Databricks workflows - Drove 7% increase in site visitors and 9% increase in ad impressions through improved search and recommendations generating $841K in additional annual revenue 
@@ -44,14 +44,12 @@ Software & Tools: Linux, Databricks, AWS, Windows, Git, Jupyter Notebook, Unity,
 EDUCATION 
 Portland State University, Portland, OR (Graduated Aug 2021) (MS) Computer Science – AI/ML focus  
 GPA: 4.0
-
-Personal Life: I grew up in Vermont and spent most of my ski career in Salt Lake City, Utah while attending the University of Utah. I did contests like the FIS slopestyle World Championships and XGames Realski and once stunt-doubled for Vin Diesel in a Hollywood Film.
+Personal Life: grew up in Vermont and spent most of my ski career in Salt Lake City, Utah while attending the University of Utah. I did contests like the FIS slopestyle World Championships and XGames Realski and once stunt-doubled for Vin Diesel in a Hollywood Film.
   In my late 20s I went back to school to get a Master's in Computer Science, focusing on AI and Machine Learning and interned for NASA along the way at the Armstrong Flight Research Center.
   When I'm not focused on the DS/ML world I spend most of my freetime now surfing and playing with my dog.
+Suggested Topics: follow the link under “press” to read Anthropic’s article about working with me or the NASA link to see my work on the fiber optic system.
 
-Suggested Topics: follow the link under “press” to read Anthropic’s article about working with me or the NASA link to see my work on the fiber optic system
-
-Remember short 1 sentence responses`;
+answer the user's question in 1 sentence.`;
 
   const r = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${process.env.gemini_key}`,
