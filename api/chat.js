@@ -54,7 +54,7 @@ Suggested Topics: follow the link under “press” to read Anthropic’s articl
 Remember short 1 sentence responses`;
 
   const r = await fetch(
-  `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.gemini_key}`,
+  `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.gemini_key}`,
   {
     method: "POST",
     headers: { "Content-Type": "application/json" },
