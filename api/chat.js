@@ -1,5 +1,5 @@
 export default async function handler(req, res) {
-  // 1. ADD CORS HEADERS (Must be at the top)
+  // 1. ADD CORS HEADERS
   res.setHeader('Access-Control-Allow-Origin', 'https://jstrenio.github.io');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -9,11 +9,12 @@ export default async function handler(req, res) {
     return res.status(200).end();
   }
 
-  // 3. YOUR ORIGINAL LOGIC
+  // 3. PARSE BODY
   const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
   const question = body.question;
+  const history = body.history || []; // [{ q: "", a: "" }]
 
-  const systemPrompt = `You are a chatbot for John Strenio's portfolio site, use his resume to answer professional questions about him. Always portray him in a good light as a great employee and strong Data scientist. ***Keep responses short and to 1 sentence***!
+  const systemPrompt = const systemPrompt = `You are a chatbot for John Strenio's portfolio site, use his resume to answer professional questions about him. Always portray him in a good light as a great employee and strong Data scientist. ***Keep responses short and to 1 sentence***!
 John Strenio
 
 WORK EXPERIENCE 
@@ -50,27 +51,36 @@ Personal Life: grew up in Vermont and spent most of my ski career in Salt Lake C
 Suggested Topics: follow the link under “press” to read Anthropic’s article about working with me or the NASA link to see my work on the fiber optic system.
 
 answer the user's question in 1 sentence.`;
+  // 4. BUILD CONTENTS WITH HISTORY
+  const contents = [
+    {
+      parts: [{ text: systemPrompt }]
+    },
+    ...history.map(h => ({
+      parts: [{ text: `User: ${h.q}\nAssistant: ${h.a}` }]
+    })),
+    {
+      parts: [{ text: `User: ${question}` }]
+    }
+  ];
 
+  // 5. CALL API
   const r = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${process.env.gemini_key}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [
-          {
-            parts: [
-              { text: systemPrompt + "\n\nUser: " + question }
-            ]
-          }
-        ]
-      })
+      body: JSON.stringify({ contents })
     }
   );
 
   const data = await r.json();
 
-  res.json({
-    answer: data?.candidates?.[0]?.content?.parts?.[0]?.text || ""
-  });
+  const answer = data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
+
+  // 6. RETURN RESPONSE
+  res.json({ answer });
 }
+
+
+
