@@ -54,27 +54,38 @@ Suggested Topics: follow the link under “press” to read Anthropic’s articl
 Remember short 1 sentence responses`;
 
   const r = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${process.env.gemini_key}`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [
-          {
-            parts: [
-              { text: systemPrompt + "\n\nUser: " + question }
-            ]
-          }
-        ]
-      })
-    }
-  );
+  `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${process.env.gemini_key}`,
+  {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      contents: [
+        {
+          role: "user",
+          parts: [
+            { text: systemPrompt + "\n\nUser: " + question }
+          ]
+        }
+      ]
+    })
+  }
+);
 
-  const data = await r.json();
+const data = await r.json();
 
-  res.json({
-    answer: data?.candidates?.[0]?.content?.parts?.[0]?.text || ""
+// DEBUG SAFETY (this is what you were missing)
+if (!r.ok) {
+  return res.status(500).json({
+    answer: data?.error?.message || "Gemini API error"
   });
+}
+
+const answer =
+  data?.candidates?.[0]?.content?.parts?.[0]?.text ||
+  data?.promptFeedback?.blockReason ||
+  "No response";
+
+res.status(200).json({ answer });
 }
 
 
