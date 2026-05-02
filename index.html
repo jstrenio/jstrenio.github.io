@@ -146,8 +146,6 @@
 </div>
 
 <script>
-let lastQA = null;
-
 async function ask() {
   const q = document.getElementById("q").value;
   const out = document.getElementById("out");
@@ -157,19 +155,10 @@ async function ask() {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ question: q })
-    // body: JSON.stringify({
-    //   question: q,
-    //   history: lastQA ? [lastQA] : []
-    // })
   });
 
   const data = await res.json();
-
   out.textContent = data.answer || "No response received.";
-
-  // store last Q/A AFTER response
-  
-  lastQA = { q: q, a: data.answer };
 }
 </script>
 
