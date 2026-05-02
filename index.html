@@ -156,10 +156,11 @@ async function ask() {
   const res = await fetch("https://jstrenio-github-io.vercel.app/api/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      question: q,
-      history: lastQA ? [lastQA] : []
-    })
+    body: JSON.stringify({ question: q })
+    // body: JSON.stringify({
+    //   question: q,
+    //   history: lastQA ? [lastQA] : []
+    // })
   });
 
   const data = await res.json();
@@ -167,6 +168,7 @@ async function ask() {
   out.textContent = data.answer || "No response received.";
 
   // store last Q/A AFTER response
+  
   lastQA = { q: q, a: data.answer };
 }
 </script>
