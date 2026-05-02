@@ -41,6 +41,7 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HTJ686P290"></script>
 <script>
+  history = [{ q: lastQuestion, a: lastAnswer }];
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -145,20 +146,28 @@
 </div>
 
 <script>
+let lastQA = null;
+
 async function ask() {
   const q = document.getElementById("q").value;
   const out = document.getElementById("out");
   out.textContent = "Thinking...";
 
-  // Points specifically to your production Vercel API
   const res = await fetch("https://jstrenio-github-io.vercel.app/api/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ question: q })
+    body: JSON.stringify({
+      question: q,
+      history: lastQA ? [lastQA] : []
+    })
   });
 
   const data = await res.json();
+
   out.textContent = data.answer || "No response received.";
+
+  // store last Q/A AFTER response
+  lastQA = { q: q, a: data.answer };
 }
 </script>
 
