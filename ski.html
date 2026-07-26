@@ -192,40 +192,6 @@
 
   </div>
 
-  <style>
-  /* Flexbox fix for the columns to ensure proper sizing */
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .col {
-    flex: 1;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  /* Responsive wrapper that forces scrolling on mobile devices */
-  .pdf-scroll-container {
-    position: relative;
-    width: 100%;
-    max-width: 1000px; /* Prevents desktop from being too stretched */
-    margin: 0 auto;    /* Centers the box */
-    height: 900px;     /* Keeps your desired height */
-    overflow: auto;    /* Forces scrollbar if content overflows */
-    -webkit-overflow-scrolling: touch; /* Crucial fix for iOS/Safari mobile touch scrolling */
-    border: 1px solid #ccc; /* Optional: adds a clean border around the viewer */
-  }
-
-  .pdf-scroll-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-  }
-</style>
-
 <div class="section"> 
   <div class="row"> 
     <div class="col header" style="text-align: center; margin-bottom: 20px;"> 
@@ -236,7 +202,7 @@
     <div class="col"> 
       <!-- Wrap the iframe inside the new scroll container -->
       <div class="pdf-scroll-container">
-        <iframe src="images/lj_resume.pdf#toolbar=0"></iframe> 
+        <iframe src="images/lj_resume.pdf#toolbar=0" style="width: 100%; min-height: 500px; height: 80vh; border: none;"></iframe>
       </div>
     </div> 
   </div> 
