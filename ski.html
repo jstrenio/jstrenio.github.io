@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="index.css?v=1.0">
   <script src="index.js"></script>
   <link rel="shortcut icon" href="favicon12.png" type="image/png" />
-  
+
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -56,11 +56,11 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link text-nowrap" href="projects.html">NASA & Past Projects</a>
+            <a class="nav-link text-nowrap" href="projects.html">NASA &amp; Past Projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-nowrap" href="ski.html">Ski Career</a>
@@ -68,6 +68,7 @@
           <li class="nav-item">
             <a class="nav-link text-nowrap" href="index.html#contact">Contact</a>
           </li>
+        </ul>
       </div>
 
     </div>
@@ -92,7 +93,7 @@
         led to the inclusion of slopestyle skiing into the Winter Olympics. 
       </div>
       <div class="col col-8">
-        
+
         <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel" data-interval="false">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
@@ -192,49 +193,115 @@
 
   </div>
 
-<div class="section">
-  <div class="row">
-    <div class="col header" style="text-align: center; margin-bottom: 20px;">
-      Ski Resume
+  <div class="section">
+    <div class="row">
+      <div class="col header" style="text-align: center; margin-bottom: 20px;">
+        Ski Resume
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <!--
+          The resume is rendered page-by-page onto <canvas> elements by PDF.js.
+          Each canvas is scaled to exactly the width of this column, so the
+          right edge mathematically cannot be cut off at any screen size.
+          The browser's built-in PDF viewer (the old <iframe>) is not used at all.
+        -->
+        <div id="pdf-resume" style="width: 100%; overflow: hidden;">
+          <noscript>
+            <a href="images/lj_resume.pdf">View my ski resume (PDF)</a>
+          </noscript>
+        </div>
+        <div class="text-center" style="margin-top: 10px;">
+          <a href="images/lj_resume.pdf" target="_blank" rel="noopener">Download PDF version</a>
+        </div>
+      </div>
     </div>
   </div>
+
+  <h3 class="full-width">
+    <div class="bar">&nbsp;</div>
+  </h3>
 
   <div class="row">
     <div class="col">
-      <div class="pdf-scroll-container">
-        <iframe
-          src="images/lj_resume.pdf#toolbar=0&view=FitH"
-          style="width: 100%; height: 80vh; border: none;">
-        </iframe>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-.pdf-scroll-container {
-  width: 1200px;
-}
-</style>
-
-
-  <h3 class="full-width">
-    <div class="bar">&nbsp</div>
-  </h3>
-
-   
-        
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        &nbsp
-      </div>
+      &nbsp;
     </div>
   </div>
 
-
 </div>
+
+<!-- PDF.js (renders the PDF ourselves instead of trusting the browser's viewer) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(function () {
+  var PDF_URL = 'images/lj_resume.pdf';
+  var container = document.getElementById('pdf-resume');
+
+  pdfjsLib.GlobalWorkerOptions.workerSrc =
+    'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+  var pdfDoc = null;
+  var lastRenderedWidth = 0;
+
+  async function renderAllPages() {
+    if (!pdfDoc) return;
+
+    var width = container.clientWidth;
+    if (width <= 0 || width === lastRenderedWidth) return;
+    lastRenderedWidth = width;
+
+    container.innerHTML = '';
+    var dpr = window.devicePixelRatio || 1;
+
+    for (var n = 1; n <= pdfDoc.numPages; n++) {
+      var page = await pdfDoc.getPage(n);
+
+      // Scale the page so its width equals the container width exactly.
+      var baseViewport = page.getViewport({ scale: 1 });
+      var scale = width / baseViewport.width;
+      var viewport = page.getViewport({ scale: scale });
+
+      var canvas = document.createElement('canvas');
+      // Render at device-pixel resolution so text stays sharp,
+      // but display at CSS width: 100% so it always fits the column.
+      canvas.width = Math.floor(viewport.width * dpr);
+      canvas.height = Math.floor(viewport.height * dpr);
+      canvas.style.width = '100%';
+      canvas.style.height = 'auto';
+      canvas.style.display = 'block';
+      canvas.style.marginBottom = '16px';
+      canvas.style.boxShadow = '0 2px 8px rgba(0,0,0,0.25)';
+      container.appendChild(canvas);
+
+      await page.render({
+        canvasContext: canvas.getContext('2d'),
+        viewport: viewport,
+        transform: dpr !== 1 ? [dpr, 0, 0, dpr, 0, 0] : null
+      }).promise;
+    }
+  }
+
+  pdfjsLib.getDocument(PDF_URL).promise
+    .then(function (doc) {
+      pdfDoc = doc;
+      return renderAllPages();
+    })
+    .catch(function (err) {
+      container.innerHTML =
+        '<p>Could not load the resume. <a href="' + PDF_URL + '">Open the PDF directly</a>.</p>';
+      console.error('PDF.js failed to load resume:', err);
+    });
+
+  // Re-render at the new width if the window is resized (debounced).
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(renderAllPages, 250);
+  });
+})();
+</script>
 
 </body>
 </html>
