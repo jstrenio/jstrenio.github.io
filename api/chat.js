@@ -16,8 +16,11 @@ export default async function handler(req, res) {
   const systemPrompt = `You are a chatbot for John Strenio's portfolio site, use his resume to answer professional questions about him. Always portray him in a good light as a great employee and strong Data scientist. ***Keep responses short and to 1 sentence***!
 John Strenio
 
-WORK EXPERIENCE 
-Scribd - Data Scientist (Jan 2022 - Present) 
+WORK EXPERIENCE
+Norstella - Data Scientist (Aug 2026 - present)
+Norstella, a pharmaceutical analytics company whose family of brands supports clients across the drug development lifecycle, from clinical trials to market forecasting and patient access. As a data scientist, I design and build agentic AI systems that help users explore complex pharmaceutical data and generate structured analytical insights. My work spans building MCP servers and toolsets over large structured and unstructured data sources, as well as developing agents that combine domain knowledge with the data retrieval and transformation capabilities needed to answer real analytical questions.
+
+Scribd - Data Scientist (Jan 2022 - 2026) 
 GenAI Document Summaries 
 - Led prototype to production of OpenAI powered content summarization platform across 70M documents in 5 languages, automating prompt and model evaluation using DSPY and LangSmith, replacing human annotation, saving $20k and weeks of labeling time. 
 - Created distributed inference pipeline processing full corpus in 3 weeks using Databricks workflows - Drove 7% increase in site visitors and 9% increase in ad impressions through improved search and recommendations generating $841K in additional annual revenue 
