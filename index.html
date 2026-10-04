@@ -1,253 +1,94 @@
 <!doctype html>
-
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>John Strenio | Data Scientist</title>
+<meta name="description" content="John Strenio is a data scientist building agentic AI systems. Former professional freeskier.">
+<link rel="shortcut icon" href="favicon12.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
 
-  <title>JohnStrenio.com</title>
-  <meta name="description">
-  <meta name="author" content="SitePoint">
-
-  <!--Bootstrap-->
-  <link
-  rel="stylesheet"
-  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-  crossorigin="anonymous"
-/>
-<!--Required Scripts for Bootstrap as per 4.4 documentation-->
-<script
-  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-  crossorigin="anonymous"
-></script>
-
-  <link rel="stylesheet" href="index.css?v=1.0">
-  <script src="index.js"></script>
-  <link rel="shortcut icon" href="favicon12.png" type="image/png" />
-  
-</head>
-
-<!-- Google tag (gtag.js) -->
+<link rel="stylesheet" href="site.css?v=2">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HTJ686P290"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HTJ686P290');
-</script>
-
-<body class="body entire-webpage">
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-    <div class="container navbar_container">
-
-      <a class="navbar-brand" href="index.html">Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link text-nowrap" href="projects.html">Hobby Projects & NASA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-nowrap" href="ski.html">Ski Career</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-nowrap" href="index.html#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-HTJ686P290');</script>
+</head>
+<body data-page="home">
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">John Strenio</a>
+    <div class="nav-right">
+      <nav class="links" id="links" aria-label="Main"><a href="index.html#work" aria-current="page">Work</a><a href="projects.html">Hobby projects &amp; NASA</a><a href="ski.html">Ski career</a><a href="index.html#contact">Contact</a></nav>
+      <button class="icon-btn" id="theme" type="button" aria-label="Toggle light and dark theme">&#9680;</button>
+      <button class="icon-btn menu" id="menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="links">&#9776;</button>
     </div>
-  </nav>
-
-
-<div class="container bg-grey">
-
-  <div class="section">
-    <div class="row">
-      <div class="col header">
-        John Strenio 
+  </div>
+</header>
+<main>
+  <div class="hero">
+    <svg class="contours" viewBox="0 0 720 600" aria-hidden="true" focusable="false">
+      <path d="M40 520C160 470 220 520 330 450S520 330 700 380"/><path d="M60 420C160 350 240 420 340 340S530 215 700 265"/>
+      <path d="M130 320C210 240 280 310 370 230S550 105 700 155"/><path d="M240 220C300 145 350 200 420 135S570 10 700 45"/>
+    </svg>
+    <div class="wrap">
+      <div>
+        <h1>John<br>Strenio</h1>
+        <p class="role">Data scientist building agentic AI systems.</p>
+        <p class="intro">I was a professional freeskier for a long time, and now I work in data science and machine learning. This site has a little about me and the work I&rsquo;ve done.</p>
+        <div class="actions"><a class="btn primary" href="#work">See my work</a><a class="btn" href="#contact">Get in touch</a></div>
       </div>
-    </div>
-    <div class="row">
-      <div class="header2 col">
-        Data Scientist 
-      </div>
-    </div>
-    <div class="row">
-      <div class="col col-6"> 
-        <img src="images/lake_surf.jpg" class="img-fluid rounded" alt="Responsive image">
-      </div>
-      <div class="col col-6">
-        My name’s John, I was a professional freeskier for a long time, now I’m a data scientist. This site has a little about me and the work I’ve done.
-      </div>
+      <div class="photo"><img src="images/lake_surf.jpg" alt="John surfing on a lake"></div>
     </div>
   </div>
 
+  <section id="about"><div class="wrap grid"><h2>Background</h2><div class="body">
+    <p>I grew up in Vermont and spent most of my ski career in Salt Lake City while attending the University of Utah. I competed in contests like the FIS Slopestyle World Championships and X Games Real Ski, and once stunt-doubled for Vin Diesel in a Hollywood film.</p>
+    <p>In my late 20s I went back to school for a Master&rsquo;s in Computer Science, focused on AI and machine learning, and interned for NASA at the Armstrong Flight Research Center along the way.</p>
+    <p>When I&rsquo;m not deep in data science and machine learning, I&rsquo;m usually surfing or playing with my dog.</p>
+  </div></div></section>
 
-  <h4>Background</h4>
-  I grew up in Vermont and spent most of my ski career in Salt Lake City, Utah while attending the University of Utah. I did contests like the FIS slopestyle World Championships and XGames Realski and once stunt-doubled for Vin Diesel in a Hollywood Film.
-  In my late 20s I went back to school to get a Master's in Computer Science, focusing on AI and Machine Learning and interned for NASA along the way at the Armstrong Flight Research Center.
-  When I'm not focused on the DS/ML world I spend most of my freetime now surfing and playing with my dog.
-
-  <h3 class="full-width"><div class="bar">&nbsp</div></h3>
-
-
-  <div class="section">
-    <a name="nasa"></a>
-    <div class="row">
-      <div class="col header">Professional Work</div>
+  <section id="work"><div class="wrap grid"><h2 id="nasa">Professional work</h2><div>
+    <div class="job">
+      <img class="logo" src="images/norstella_logo.jpg" alt="Norstella logo">
+      <div><h3>Norstella</h3><p class="when">Data scientist, 2026 to present</p>
+      <p>A pharmaceutical analytics company whose brands support clients across the drug development lifecycle, from clinical trials to market forecasting and patient access. I design and build agentic AI systems that help users explore complex pharmaceutical data and generate structured analytical insights, including MCP servers and toolsets over large structured and unstructured data sources, and agents that pair domain knowledge with the retrieval and transformation tools needed to answer real analytical questions.</p></div>
     </div>
-    <h3>&nbsp &nbsp</h3>
-    <div class="row">
-      <div class="col col-5">
-        <img src="images/norstella_logo.jpg" class="img-fluid rounded" alt="Responsive image">
-      </div>
-      <div class="col col-7">
-        I currently work for Norstella, a pharmaceutical analytics company whose family of brands supports clients across the drug development lifecycle, from clinical trials to market forecasting and patient access. As a data scientist, I design and build agentic AI systems that help users explore complex pharmaceutical data and generate structured analytical insights. My work spans building MCP servers and toolsets over large structured and unstructured data sources, as well as developing agents that combine domain knowledge with the data retrieval and transformation capabilities needed to answer real analytical questions.
-      </div>
+    <div class="job">
+      <img class="logo" src="images/scribd_logo.jpg" alt="Scribd logo">
+      <div><h3>Scribd</h3><p class="when">Data scientist, 2022 to 2026</p>
+      <p>An ebook and audiobook subscription platform with hundreds of millions of documents in many languages. I built ML solutions using both traditional NLP and LLMs to improve search, discovery, and content quality, across the full lifecycle: prototyping generative AI applications, pre-training custom models, and building distributed inference pipelines and agentic RAG over a 100M+ document corpus. Projects covered document summarization, search query correction, SEO optimization, and recommendations, including features that generated millions of dollars in year-over-year revenue.</p></div>
     </div>
-    <h3>&nbsp &nbsp</h3>
+  </div></div></section>
 
-    <div class="row">
-      <div class="col col-5">
-        <img src="images/scribd_logo.jpg" class="img-fluid rounded" alt="Responsive image">
-      </div>
-      <div class="col col-7">
-        From 2022-2026 I worked for Scribd, an ebook and audiobook subscription platform with hundreds of millions of documents across numerous languages. As a data scientist, I developed ML solutions leveraging both "traditional" NLP techniques as well as LLMs to improve search, discovery, and content quality. My work spanned the full ML lifecycle, from prototyping generative AI applications and pre-training custom models to building distributed inference pipelines and agentic RAG architectures for our 100M+ document corpus. I delivered projects across document summarization, search query correction, SEO optimization, and recommendation systems, including features that generated millions of dollars in year-over-year revenue while improving user experience and advancing the company’s ML infrastructure.
-      </div>
+  <section id="ask"><div class="wrap grid"><h2>Ask about my experience</h2><div>
+    <p class="hint">Type a question about my background or work and get an answer.</p>
+    <div class="ask">
+      <label for="q" style="position:absolute;left:-9999px">Your question</label>
+      <textarea id="q" placeholder="What kind of agents have you built?"></textarea>
+      <button class="btn primary" id="send" type="button">Send</button>
+      <p class="out" id="out" aria-live="polite"></p>
     </div>
-  </div>
+  </div></div></section>
 
-  <h3 class="full-width"><div class="bar">&nbsp</div></h3>
+  <section id="press"><div class="wrap grid"><h2>Press</h2><div class="press">
+    <a href="https://www.anthropic.com/customers/scribd" target="_blank" rel="noopener">Anthropic</a>
+    <a href="https://www.nytimes.com/2017/01/18/movies/xxx-the-return-of-xander-cage-extreme-stunts-vin-diesel.html" target="_blank" rel="noopener">New York Times</a>
+    <a href="https://ntrs.nasa.gov/citations/20190034168" target="_blank" rel="noopener">NASA</a>
+    <a href="https://web.archive.org/web/20111024145940/http://espn.go.com/action/freeskiing/blog/_/post/7140792/lj-strenio-traveling-circus" target="_blank" rel="noopener">ESPN</a>
+    <a href="https://web.archive.org/web/20190812235729/https://www.powder.com/interview/urban-ski-legend-lj-strenio-is-going-to-work-for-nasa/" target="_blank" rel="noopener">Powder</a>
+    <a href="https://freeskier.com/videos/every-single-crash-from-the-making-of-lj-strenios-x-games-real-ski-edit" target="_blank" rel="noopener">Freeskier</a>
+  </div></div></section>
 
-<!-- Put this CSS in your <head> to fix the wrapping and size -->
-<style>
-  #q { width: 100%; height: 100px; margin-bottom: 10px; padding: 10px; }
-  #out { 
-    white-space: pre-wrap; 
-    word-wrap: break-word; 
-    background: #f4f4f4; 
-    padding: 15px; 
-    border-radius: 5px; 
-    width: 100%;
-    min-height: 50px;
-  }
-</style>
+  <section id="contact"><div class="wrap grid"><h2>Contact</h2><div class="contact">
+    <div><a class="btn primary" href="mailto:johnstrenio@gmail.com"><img src="images/gmail.jpg" alt="">Email me</a>
+    <p class="addr">johnstrenio@gmail.com</p></div>
+    <img class="shaka" src="images/shaka.jpg" alt="Shaka">
+  </div></div></section>
+</main>
+<footer><div class="wrap">&copy; <span id="yr">2026</span> John Strenio</div></footer>
 
-<div class="section">
-  <textarea id="q" placeholder="Ask me about my experience..."></textarea>
-  <button class="btn btn-primary" onclick="ask()">Send</button>
-  <pre id="out">...</pre>
-</div>
-
-<script>
-async function ask() {
-  const q = document.getElementById("q").value;
-  const out = document.getElementById("out");
-  out.textContent = "Thinking...";
-
-  // Points specifically to your production Vercel API
-  const res = await fetch("https://jstrenio-github-io.vercel.app/api/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ question: q })
-  });
-
-  const data = await res.json();
-  out.textContent = data.answer || "No response received.";
-}
-</script>
-
-  <h3 class="full-width"><div class="bar">&nbsp</div></h3>
-
-
-  <div class="section">
-    <div class="row">
-      <div class="col header">Press</div>
-    </div>
-
-    <!-- Row 1 -->
-    <div class="row g-2">
-      <div class="col-2">&nbsp;</div>
-
-      <div class="col-2">
-        <a class="btn btn-secondary" href="https://www.anthropic.com/customers/scribd" target="_blank">Anthropic</a>
-      </div>
-
-      <div class="col-2">
-        <a class="btn btn-secondary" href="https://web.archive.org/web/20111024145940/http://espn.go.com/action/freeskiing/blog/_/post/7140792/lj-strenio-traveling-circus" target="_blank">ESPN</a>
-      </div>
-
-      <div class="col-2">
-        <a class="btn btn-secondary text-nowrap" href="https://www.nytimes.com/2017/01/18/movies/xxx-the-return-of-xander-cage-extreme-stunts-vin-diesel.html" target="_blank">New York Times</a>
-      </div>
-
-      <div class="col-2">&nbsp;</div>
-      <div class="col-2">&nbsp;</div>
-    </div>
-
-    <!-- Row 2 -->
-    <div class="row g-2 mt-2">
-      <div class="col-2">&nbsp;</div>
-
-      <div class="col-2">
-        <a class="btn btn-secondary" href="https://ntrs.nasa.gov/citations/20190034168" target="_blank">NASA</a>
-      </div>
-
-      <div class="col-2">
-        <a class="btn btn-secondary" href="https://web.archive.org/web/20190812235729/https://www.powder.com/interview/urban-ski-legend-lj-strenio-is-going-to-work-for-nasa/" target="_blank">Powder</a>
-      </div>
-
-      <div class="col-2">
-        <a class="btn btn-secondary" href="https://freeskier.com/videos/every-single-crash-from-the-making-of-lj-strenios-x-games-real-ski-edit" target="_blank">Freeskier</a>
-      </div>
-
-      <div class="col-2">&nbsp;</div>
-      <div class="col-2">&nbsp;</div>
-    </div>
-  </div>
-
-
-  <h3 class="full-width"><div class="bar">&nbsp</div></h3>
-
-
-  <div class="section" id="contact">
-    <div class="row">
-      <div class="col header">Contact</div>
-    </div>
-
-    <div class="row mt-3">
-      <div class="col col-2"></div>
-
-      <div class="col col-2">
-        <a class="btn btn-secondary" href="mailto:johnstrenio@gmail.com" target="_blank">
-          <img src="images/gmail.jpg" width="30" /> Email
-        </a>
-      </div>
-
-      <div class="col col-8">
-        <img src="images/shaka.jpg" class="img-fluid rounded" alt="Responsive image">
-      </div>
-    </div>
-  </div>
-
-</div>
-
+<script src="site.js"></script>
 </body>
-
 </html>
